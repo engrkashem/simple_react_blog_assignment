@@ -5,3 +5,5 @@ export default function Home() {
     </div>
   );
 }
+
+// console.log(import.meta.env.VITE_NEWS_API_KEY);
