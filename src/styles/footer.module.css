@@ -1,0 +1,36 @@
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+.logo {
+  font-size: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.navIcon {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.text {
+  font-weight: 600;
+}
