@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import StoreContext from "../context/storeContext";
+
 export default function Home() {
+  const contextData = useContext(StoreContext);
+  // console.log(contextData);
   return (
     <div>
       <h1>This is Home page</h1>
