@@ -1,22 +1,26 @@
+import { useState } from "react";
 import useFetch from "./Hooks/useFetch";
 import StoreContext from "./context/storeContext";
 import MainLayout from "./layout/MainLayout";
 
 function App() {
-  const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=e5d9b2cb4ea54b348e2439e480fef515`;
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+
+  const url = `https://newsapi.org/v2/everything?q=bitcoin&page=${page}&pageSize=${pageSize}&apiKey=e5d9b2cb4ea54b348e2439e480fef515`;
 
   const [data] = useFetch(url);
-  console.log(data);
+  const blogs = data?.articles;
 
-  const blogs = [
-    {
-      id: 1,
-      content: "abc",
-    },
-  ];
+  const contextData = {
+    blogs,
+    setPage,
+    setPageSize,
+  };
+
   return (
     <div className="container">
-      <StoreContext.Provider value={{ blogs: blogs }}>
+      <StoreContext.Provider value={contextData}>
         <MainLayout />
       </StoreContext.Provider>
     </div>
