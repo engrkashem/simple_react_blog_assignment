@@ -1,0 +1,21 @@
+.author {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.authorIcon {
+  font-size: 2rem;
+}
+
+.blog {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.imageContainer {
+  width: 300px;
+  height: 200px;
+}
