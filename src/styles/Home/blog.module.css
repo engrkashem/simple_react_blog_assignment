@@ -1,3 +1,14 @@
+.container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  padding: 2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
 .author {
   display: flex;
   justify-content: start;
@@ -11,8 +22,37 @@
 
 .blog {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 100px;
+  padding: 1rem;
+  gap: 30px;
+}
+
+.description {
+  color: rgb(107, 104, 104);
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likePublish {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date {
+  color: rgb(107, 104, 104);
 }
 
 .imageContainer {

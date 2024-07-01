@@ -8,7 +8,7 @@ export default function Home() {
   const { blogs } = useContext(StoreContext);
   console.log(blogs);
   return (
-    <div>
+    <div className={homeStyle.container}>
       <div className={homeStyle.searchContainer}>
         <Search />
       </div>

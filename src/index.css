@@ -29,3 +29,15 @@
 .link:hover {
   border-bottom: 2px solid black;
 }
+
+.icon {
+  font-size: 1.3rem;
+}
+
+.gray {
+  color: gray;
+}
+
+.red {
+  color: rgb(247, 81, 81);
+}
