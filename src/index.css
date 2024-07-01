@@ -41,3 +41,7 @@
 .red {
   color: rgb(247, 81, 81);
 }
+
+.cursor {
+  cursor: pointer;
+}

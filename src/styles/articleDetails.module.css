@@ -1,0 +1,19 @@
+.container {
+  width: 700px;
+  margin: 3rem auto;
+}
+
+.title {
+  margin-top: 2rem;
+}
+
+.author {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.details {
+  margin: 2rem 5px;
+  text-align: justify;
+}

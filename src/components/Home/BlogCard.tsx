@@ -1,11 +1,24 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { TArticle } from "../../Types";
 import logo from "../../assets/logo.png";
+import StoreContext from "../../context/storeContext";
 import blogStyle from "../../styles/Home/blog.module.css";
 
 export default function BlogCard({ blog }: { blog: TArticle }) {
+  const { setBlog } = useContext(StoreContext);
+  const navigate = useNavigate();
+
   const publishedDate = new Date(blog.publishedAt);
   const monthName = publishedDate.toLocaleString("default", { month: "long" });
   const date = publishedDate.getDate();
+
+  const handleBlogDetails = () => {
+    if (setBlog) {
+      setBlog(blog);
+      navigate(`/article/${blog.title}`);
+    }
+  };
 
   return (
     <div className={blogStyle.container}>
@@ -20,7 +33,7 @@ export default function BlogCard({ blog }: { blog: TArticle }) {
             <span>{blog?.author}</span>
           </p>
           {/* title and description  */}
-          <div>
+          <div onClick={handleBlogDetails} className="cursor">
             <h1>{blog?.title}</h1>
             <p className={blogStyle.description}>{blog?.description}</p>
           </div>
