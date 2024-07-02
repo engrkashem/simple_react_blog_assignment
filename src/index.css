@@ -45,3 +45,15 @@
 .cursor {
   cursor: pointer;
 }
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.twoEm {
+  font-size: 2em;
+}
+
+.colorGray {
+  color: gray;
+}

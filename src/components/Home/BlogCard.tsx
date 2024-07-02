@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { TArticle } from "../../Types";
 import logo from "../../assets/logo.png";
 import StoreContext from "../../context/storeContext";
-import blogStyle from "../../styles/Home/blog.module.css";
+import blogStyle from "../../styles/Article/blog.module.css";
 
 export default function BlogCard({ blog }: { blog: TArticle }) {
   const { setBlog } = useContext(StoreContext);

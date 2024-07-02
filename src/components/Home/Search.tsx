@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import StoreContext from "../../context/storeContext";
-import searchStyle from "../../styles/Home/search.module.css";
+import searchStyle from "../../styles/Article/search.module.css";
 
 export default function Search() {
   // local state

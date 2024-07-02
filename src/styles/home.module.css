@@ -1,0 +1,15 @@
+.container {
+  background-image: url("../assets/bgCover.png");
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 100vw;
+  height: 75vh;
+
+  margin-top: 5px;
+}
+
+.title {
+  text-align: end;
+  padding: 15% 15% 0 0;
+}
