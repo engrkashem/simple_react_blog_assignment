@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
 import StoreContext from "../context/storeContext";
 import articleDetails from "../styles/articleDetails.module.css";
@@ -27,7 +28,7 @@ export default function ArticleDetails() {
 
       {/* image  */}
       <div className={articleDetails.imgContainer}>
-        <img
+        <LazyLoadImage
           className={articleDetails.image}
           src={blog?.urlToImage ? blog?.urlToImage : ""}
           alt="blog image"

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
 import { TArticle } from "../../Types";
 import logo from "../../assets/logo.png";
@@ -51,10 +52,10 @@ export default function BlogCard({ blog }: { blog: TArticle }) {
 
       {/* image/poster  */}
       <div className={blogStyle.imageContainer}>
-        <img
+        <LazyLoadImage
+          src={blog?.urlToImage ? blog?.urlToImage : logo}
           width={300}
           height={200}
-          src={blog?.urlToImage ? blog?.urlToImage : logo}
           alt="blog image"
         />
       </div>
