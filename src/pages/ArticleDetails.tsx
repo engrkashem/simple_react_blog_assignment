@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 import StoreContext from "../context/storeContext";
 import articleDetails from "../styles/articleDetails.module.css";
 
@@ -31,6 +32,7 @@ export default function ArticleDetails() {
         <LazyLoadImage
           className={articleDetails.image}
           src={blog?.urlToImage ? blog?.urlToImage : ""}
+          placeholderSrc={logo}
           alt="blog image"
         />
       </div>

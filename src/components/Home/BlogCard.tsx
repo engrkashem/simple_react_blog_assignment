@@ -54,9 +54,11 @@ export default function BlogCard({ blog }: { blog: TArticle }) {
       <div className={blogStyle.imageContainer}>
         <LazyLoadImage
           src={blog?.urlToImage ? blog?.urlToImage : logo}
+          placeholderSrc={logo}
           width={300}
           height={200}
           alt="blog image"
+          effect="blur"
         />
       </div>
     </div>
