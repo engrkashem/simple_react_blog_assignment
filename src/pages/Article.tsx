@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import BlogCard from "../components/Home/BlogCard";
 import Search from "../components/Home/Search";
+import Loader from "../components/Loader";
 import StoreContext from "../context/storeContext";
 import articleStyle from "../styles/Article/article.module.css";
 
 export default function Home() {
   const { blogs } = useContext(StoreContext);
+
+  if (!blogs) return <Loader />;
 
   return (
     <div className={articleStyle.container}>
