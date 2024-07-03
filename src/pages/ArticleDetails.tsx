@@ -26,12 +26,13 @@ export default function ArticleDetails() {
       </p>
 
       {/* image  */}
-      <img
-        width={700}
-        height={500}
-        src={blog?.urlToImage ? blog?.urlToImage : ""}
-        alt="blog image"
-      />
+      <div className={articleDetails.imgContainer}>
+        <img
+          className={articleDetails.image}
+          src={blog?.urlToImage ? blog?.urlToImage : ""}
+          alt="blog image"
+        />
+      </div>
 
       {/* article details  */}
       <p className={articleDetails.details}>
