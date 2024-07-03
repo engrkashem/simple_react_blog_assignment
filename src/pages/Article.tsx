@@ -9,9 +9,12 @@ export default function Home() {
 
   return (
     <div className={articleStyle.container}>
+      {/* search field  */}
       <div className={articleStyle.searchContainer}>
         <Search />
       </div>
+
+      {/* article list  */}
       <div className={articleStyle.blogContainer}>
         {blogs?.map((blog) => (
           <BlogCard key={blog.title + blog.author} blog={blog} />
